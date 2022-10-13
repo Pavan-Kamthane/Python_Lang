@@ -14,8 +14,8 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth,wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
 
-# Scrape tweets from a user's account
-posts = api.user_timeline(screen_name = "@user", count = 7, lang ="en", tweet_mode="extended")
+# Scrape 10 tweets from a user's account. You can scrape more by increasing count size
+posts = api.user_timeline(screen_name = "@user", count = 10, lang ="en", tweet_mode="extended")
 
 # Create dataframe
 df = pd.DataFrame(data =[tweet.text for tweet in posts], columns = ["Tweet"])
