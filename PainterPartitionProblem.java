@@ -47,4 +47,6 @@ int arr[] = { 10, 20, 60, 50, 30, 40 };
 		int k = 3;
 System.out.println(partition(arr, n, k));
 }
+
 }
+
